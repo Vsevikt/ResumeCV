@@ -1,0 +1,831 @@
+/* ADD EDUCATION BUTTON */
+
+.education-add-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 11px 18px;
+
+    background: #f1edff;
+    color: #7555d9;
+
+    border: 1px solid #ded5ff;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.education-add-btn:hover {
+    background: #7555d9;
+    color: #ffffff;
+    border-color: #7555d9;
+    box-shadow: 0 4px 12px rgba(117, 85, 217, 0.18);
+}
+
+.education-add-btn i {
+    font-size: 16px;
+}
+
+
+/* PREVENT TEXTAREA RESIZING */
+
+textarea.form-control {
+    resize: none !important;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+
+/* LIMIT INPUT WIDTH */
+
+input.form-control {
+    max-width: 100%;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+
+/* PREVENT ELEMENTS FROM OVERFLOWING THEIR CONTAINERS */
+
+.form-group,
+.form-section,
+.form-card,
+.workspace {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.form-control {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/*---*/
+
+:root {
+    --primary: #7555d9;
+    --primary-dark: #6041c3;
+    --primary-light: #f1edff;
+    --background: #f7f7fc;
+    --text: #25233a;
+    --muted: #85839a;
+    --border: #e9e7f1;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border);
+    padding: 17px 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+    font-size: 21px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.brand-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: linear-gradient(135deg, #9475f0, #6848cf);
+    border-radius: 12px;
+    font-size: 19px;
+}
+
+.navbar-description {
+    margin-left: 14px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* MAIN */
+
+.page-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 42px 28px 60px;
+}
+
+.hero {
+    margin-bottom: 34px;
+}
+
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 12px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    max-width: 750px;
+    margin: 0 0 12px;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+    font-weight: 800;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* WORKSPACE */
+
+.workspace {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 28px;
+    align-items: start;
+}
+
+.form-card,
+.preview-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(46, 35, 91, 0.04);
+}
+
+.form-card {
+    padding: 26px;
+}
+
+.preview-card {
+    padding: 25px;
+    position: sticky;
+    top: 20px;
+}
+
+.card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 23px;
+}
+
+.card-heading h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.card-heading p {
+    margin: 5px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.heading-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: var(--primary-light);
+    border-radius: 13px;
+    font-size: 19px;
+}
+
+/* FORM SECTIONS */
+
+.form-section {
+    padding: 22px 0;
+    border-top: 1px solid var(--border);
+}
+
+.form-section:first-of-type {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 19px;
+}
+
+.section-number {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.section-heading h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.section-heading p {
+    margin: 3px 0 0;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.form-label {
+    margin-bottom: 7px;
+    color: #49465e;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.form-control {
+    min-height: 43px;
+    padding: 11px 13px;
+    border: 1px solid #e6e3ef;
+    border-radius: 10px;
+    background: #ffffff;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 13px;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(117, 85, 217, 0.1);
+}
+
+textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+/* PHOTO UPLOAD */
+
+.photo-url-wrap {
+    position: relative;
+}
+
+.photo-url-wrap .form-control {
+    padding-left: 39px;
+}
+
+.photo-url-wrap i {
+    position: absolute;
+    z-index: 1;
+    top: 13px;
+    left: 13px;
+    color: #9993b0;
+    font-size: 16px;
+}
+
+.photo-upload {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 100px;
+    padding: 17px;
+    border: 1.5px dashed #cfc5ef;
+    border-radius: 13px;
+    background: #faf9ff;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.photo-upload:hover {
+    border-color: var(--primary);
+    background: #f5f1ff;
+}
+
+.upload-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: #eee8ff;
+    color: var(--primary);
+    border-radius: 13px;
+    font-size: 22px;
+}
+
+.upload-copy {
+    flex: 1;
+    min-width: 0;
+}
+
+.upload-copy strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #39344f;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.upload-copy small {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.upload-action {
+    padding: 8px 12px;
+    border: 1px solid #e0d8f7;
+    border-radius: 8px;
+    background: #ffffff;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.photo-upload input[type="file"] {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.photo-file-name {
+    display: block;
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* BUTTONS */
+
+.btn-primary {
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 11px;
+    background: linear-gradient(135deg, #8868e8, #6848cf);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 5px 14px rgba(117, 85, 217, 0.2);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #7959dc, #5939bd);
+    color: #ffffff;
+}
+
+.btn-primary:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+/* PREVIEW */
+
+.preview-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 19px;
+}
+
+.preview-heading h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.preview-heading p {
+    margin: 5px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.preview-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 10px;
+    background: #effaf3;
+    color: #29975a;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.preview-status span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #39b96e;
+}
+
+.resume-paper {
+    width: 100%;
+    min-height: 850px;
+    padding: 42px 43px;
+    background: #ffffff;
+    border: 1px solid #e9e7ef;
+    box-shadow: 0 5px 20px rgba(35, 28, 69, 0.07);
+    color: #282638;
+}
+
+.resume-header {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #7958d7;
+}
+
+.resume-photo {
+    width: 112px;
+    height: 112px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #f0ecfa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resume-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-placeholder {
+    color: #9b8bc9;
+    font-size: 35px;
+}
+
+.resume-header-info {
+    min-width: 0;
+}
+
+.resume-name {
+    margin: 0 0 7px;
+    color: #29243c;
+    font-size: 30px;
+    line-height: 1.15;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+.resume-role {
+    margin: 0 0 13px;
+    color: #7958d7;
+    font-size: 12px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.resume-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    color: #777487;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.resume-contact span {
+    overflow-wrap: anywhere;
+}
+
+.resume-section {
+    margin-top: 25px;
+}
+
+.resume-section h3 {
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e8e4f2;
+    color: #7958d7;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.resume-section p {
+    margin: 0;
+    color: #565365;
+    font-size: 13px;
+    line-height: 1.7;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+.resume-entry {
+    margin-bottom: 14px;
+}
+
+.resume-entry:last-child {
+    margin-bottom: 0;
+}
+
+.resume-entry strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #302d40;
+    font-size: 13px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.resume-entry small {
+    display: block;
+    margin-bottom: 6px;
+    color: #8b879b;
+    font-size: 11px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    display: inline-block;
+    padding: 7px 10px;
+    border-radius: 7px;
+    background: #f1edfb;
+    color: #6748bd;
+    font-size: 11px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.preview-download {
+    width: 100%;
+    margin-top: 19px;
+}
+
+.preview-note {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 10px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 25px 15px;
+    color: var(--muted);
+    font-size: 11px;
+    text-align: center;
+}
+
+/* PDF EXPORT */
+
+.resume-paper.pdf-export {
+    display: block !important;
+    box-sizing: border-box !important;
+    width: 794px !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 42px 43px !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+    color: #282638 !important;
+    overflow: visible !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.resume-paper.pdf-export .resume-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 22px !important;
+    padding-bottom: 25px !important;
+    border-bottom: 2px solid #7958d7 !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.resume-paper.pdf-export .resume-photo {
+    width: 112px !important;
+    height: 112px !important;
+    flex-shrink: 0 !important;
+}
+
+.resume-paper.pdf-export .resume-name {
+    font-size: 30px !important;
+    line-height: 1.15 !important;
+}
+
+.resume-paper.pdf-export .resume-role {
+    font-size: 13px !important;
+}
+
+.resume-paper.pdf-export .resume-contact {
+    font-size: 12px !important;
+}
+
+.resume-paper.pdf-export .resume-section {
+    display: block !important;
+    margin-top: 25px !important;
+}
+
+.resume-paper.pdf-export .resume-section h3 {
+    font-size: 13px !important;
+    break-after: avoid;
+    page-break-after: avoid;
+}
+
+.resume-paper.pdf-export .resume-section p {
+    font-size: 13px !important;
+    line-height: 1.7 !important;
+}
+
+.resume-paper.pdf-export .resume-entry {
+    margin-bottom: 14px !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.resume-paper.pdf-export .resume-entry strong {
+    font-size: 13px !important;
+}
+
+.resume-paper.pdf-export .resume-entry small {
+    font-size: 11px !important;
+}
+
+.resume-paper.pdf-export .skill-tag {
+    font-size: 11px !important;
+}
+
+.resume-paper.pdf-export img {
+    max-width: 100%;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-card {
+        position: static;
+    }
+
+    .resume-paper {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-container {
+        padding: 28px 14px 40px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .form-card,
+    .preview-card {
+        padding: 18px;
+        border-radius: 15px;
+    }
+
+    .resume-paper {
+        min-height: 700px;
+        padding: 25px 20px;
+    }
+
+    .resume-header {
+        gap: 14px;
+    }
+
+    .resume-photo {
+        width: 82px;
+        height: 82px;
+    }
+
+    .resume-name {
+        font-size: 23px;
+    }
+
+    .resume-role {
+        font-size: 11px;
+    }
+
+    .resume-contact {
+        font-size: 10px;
+    }
+
+    .upload-action {
+        display: none;
+    }
+}
+
+/* PDF EXPORT FIX */
+
+.resume-paper.pdf-export {
+    display: block !important;
+    position: static !important;
+    width: 794px !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 42px 43px !important;
+    background: #ffffff !important;
+    color: #282638 !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.resume-paper.pdf-export * {
+    visibility: visible !important;
+}
+
+.form-section .form-group {
+    margin-bottom: 8px;
+}
+
+.form-section .row {
+    margin-bottom: 4px;
+}
+
+.form-section .form-label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.photo-file-name {
+    display: block;
+    margin-top: 4px;
+}

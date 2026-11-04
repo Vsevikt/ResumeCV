@@ -1,0 +1,677 @@
+{% extends "main/layout.html" %}
+
+{% block title %}
+ResumeCV — Create a Professional Resume
+{% endblock %}
+
+{% block content %}
+<main class="page-container">
+
+    <section class="hero">
+        <div class="hero-eyebrow">
+            <i class="bi bi-stars"></i>
+            Your next career step
+        </div>
+
+        <h1>Create a resume that opens new opportunities</h1>
+
+        <p>
+            Fill in your personal information, education, skills, and projects.
+            See changes instantly and download your completed resume
+            in PDF format.
+        </p>
+    </section>
+
+    <section class="workspace">
+
+        <!-- FORM -->
+
+        <div class="form-card">
+
+            <div class="card-heading">
+                <div>
+                    <h2>Your Information</h2>
+                    <p>Fill in the fields to create your resume</p>
+                </div>
+
+                <div class="heading-icon">
+                    <i class="bi bi-pencil-square"></i>
+                </div>
+            </div>
+
+            <form id="resumeForm" autocomplete="on">
+
+                <!-- 01 PERSONAL INFORMATION -->
+
+                <section class="form-section">
+
+                    <div class="section-heading">
+                        <span class="section-number">01</span>
+                        <div>
+                            <h3>Personal Information</h3>
+                            <p>Your basic information</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="firstName">
+                                    First Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="firstName"
+                                    placeholder="For example, John"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="lastName">
+                                    Last Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="lastName"
+                                    placeholder="For example, Smith"
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="workDirection">
+                            Desired Position
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="workDirection"
+                            placeholder="For example, Frontend Developer"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="photo">
+                            Photo URL
+                        </label>
+
+                        <div class="photo-url-wrap">
+                            <i class="bi bi-link-45deg"></i>
+
+                            <input
+                                type="url"
+                                class="form-control"
+                                id="photo"
+                                placeholder="https://example.com/photo.jpg"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">
+                            Or upload a photo from your device
+                        </label>
+
+                        <label class="photo-upload" for="photoFile">
+
+                            <span class="upload-icon">
+                                <i class="bi bi-cloud-arrow-up"></i>
+                            </span>
+
+                            <span class="upload-copy">
+                                <strong>Upload a photo from your device</strong>
+                                <small>JPG, PNG or WEBP · up to 8 MB</small>
+                            </span>
+
+                            <span class="upload-action">
+                                Choose File
+                            </span>
+
+                            <input
+                                type="file"
+                                id="photoFile"
+                                accept="image/jpeg,image/png,image/webp"
+                            >
+                        </label>
+
+                        <span class="photo-file-name" id="photoFileName">
+                            No file selected
+                        </span>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="city">
+                                    City
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="city"
+                                    placeholder="Amsterdam"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="email">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="email"
+                                    placeholder="example@gmail.com"
+                                >
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            class="form-control"
+                            id="phone"
+                            placeholder="+31 6 12345678"
+                        >
+                    </div>
+
+                </section>
+
+                <!-- 02 ABOUT -->
+
+                <section class="form-section">
+
+                    <div class="section-heading">
+                        <span class="section-number">02</span>
+                        <div>
+                            <h3>About Me</h3>
+                            <p>Briefly describe your strengths</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="about">
+                            About Me
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="about"
+                            placeholder="Tell us about your experience, interests, and professional goals..."
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="qualities">
+                            Personal Qualities
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="qualities"
+                            placeholder="Responsibility, communication skills, attention to detail..."
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="careerGoal">
+                            Career Objective
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="careerGoal"
+                            placeholder="What kind of job or opportunities are you looking for?"
+                        ></textarea>
+                    </div>
+
+                </section>
+
+                <!-- 03 EDUCATION -->
+
+                <section class="form-section">
+
+                    <div class="section-heading">
+                        <span class="section-number">03</span>
+                        <div>
+                            <h3>Education</h3>
+                            <p>Educational institutions and qualifications</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="institution">
+                            Educational Institution
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="institution"
+                            placeholder="University or college name"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="specialty">
+                            Field of Study
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="specialty"
+                            placeholder="For example, Computer Science"
+                        >
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="studyStart">
+                                    Start Date
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="studyStart"
+                                    placeholder="2022"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="studyEnd">
+                                    End Date
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="studyEnd"
+                                    placeholder="2026"
+                                >
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- ADDITIONAL EDUCATION -->
+
+                    <div id="additionalEducation"></div>
+
+                    <button
+                        type="button"
+                        class="btn btn-primary mt-3"
+                        onclick="addEducation()"
+                    >
+                        <i class="bi bi-plus-circle me-2"></i>
+                        Add Another Education
+                    </button>
+
+                </section>
+
+                <!-- 04 SKILLS -->
+
+                <section class="form-section">
+
+                    <div class="section-heading">
+                        <span class="section-number">04</span>
+                        <div>
+                            <h3>Skills</h3>
+                            <p>Your professional and language skills</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="programming">
+                            Programming Languages
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="programming"
+                            placeholder="Python, JavaScript, HTML, CSS..."
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="programs">
+                            Software and Tools
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="programs"
+                            placeholder="Figma, Photoshop, Git, VS Code..."
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="languages">
+                            Languages
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="languages"
+                            placeholder="English — B2, Your Language — Native..."
+                        ></textarea>
+                    </div>
+
+                </section>
+
+                <!-- 05 EXPERIENCE -->
+
+                <section class="form-section">
+
+                    <div class="section-heading">
+                        <span class="section-number">05</span>
+                        <div>
+                            <h3>Work Experience or Projects</h3>
+                            <p>Tell us about your work and achievements</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="projectName">
+                            Project Name or Position
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="projectName"
+                            placeholder="For example, Website Development"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="projectDescription">
+                            Project or Responsibilities Description
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="projectDescription"
+                            placeholder="Describe what you worked on..."
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="technologies">
+                            Technologies Used
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="technologies"
+                            placeholder="Python, Django, HTML, CSS..."
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="results">
+                            Results and Achievements
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="results"
+                            placeholder="What results did you achieve?"
+                        ></textarea>
+                    </div>
+
+                </section>
+
+            </form>
+
+        </div>
+
+        <!-- PREVIEW -->
+
+        <div class="preview-card">
+
+            <div class="preview-heading">
+
+                <div>
+                    <h2>Resume Preview</h2>
+                    <p>All changes are instantly reflected in your resume</p>
+                </div>
+
+                <div class="preview-status">
+                    <span></span>
+                    Live preview
+                </div>
+
+            </div>
+
+            <div class="resume-paper" id="resume-paper">
+
+                <!-- RESUME HEADER -->
+
+                <header class="resume-header">
+
+                    <div class="resume-photo">
+
+                        <img
+                            id="previewPhoto"
+                            src=""
+                            alt="Profile Photo"
+                            style="display: none;"
+                        >
+
+                        <div
+                            class="photo-placeholder"
+                            id="photo-placeholder"
+                        >
+                            <i class="bi bi-person"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="resume-header-info">
+
+                        <h1 class="resume-name" id="previewName">
+                            Your First and Last Name
+                        </h1>
+
+                        <p class="resume-role" id="previewWorkDirection">
+                            Desired Position
+                        </p>
+
+                        <div class="resume-contact">
+
+                            <span id="previewCity">
+                                <i class="bi bi-geo-alt"></i>
+                                City
+                            </span>
+
+                            <span id="previewEmail">
+                                <i class="bi bi-envelope"></i>
+                                Email
+                            </span>
+
+                            <span id="previewPhone">
+                                <i class="bi bi-telephone"></i>
+                                Phone
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </header>
+
+                <!-- ABOUT -->
+
+                <section class="resume-section" id="aboutSection">
+
+                    <h3>About Me</h3>
+
+                    <p id="previewAbout">
+                        A brief introduction about you, your interests,
+                        experience, and professional qualities.
+                    </p>
+
+                </section>
+
+                <!-- QUALITIES -->
+
+                <section class="resume-section" id="qualitiesSection">
+
+                    <h3>Personal Qualities</h3>
+
+                    <p id="previewQualities">
+                        Your personal qualities.
+                    </p>
+
+                </section>
+
+                <!-- CAREER GOAL -->
+
+                <section class="resume-section" id="careerGoalSection">
+
+                    <h3>Career Objective</h3>
+
+                    <p id="previewCareerGoal">
+                        Your professional goals.
+                    </p>
+
+                </section>
+
+                <!-- EDUCATION -->
+
+                <section class="resume-section" id="educationSection">
+
+                    <h3>Education</h3>
+
+                    <div class="resume-entry">
+
+                        <strong id="previewInstitution">
+                            Educational Institution
+                        </strong>
+
+                        <small id="previewStudyPeriod">
+                            Study Period
+                        </small>
+
+                        <p id="previewSpecialty">
+                            Field of Study
+                        </p>
+
+                    </div>
+
+                    <div id="previewAdditionalEducation"></div>
+
+                </section>
+
+                <!-- SKILLS -->
+
+                <section class="resume-section" id="skillsSection">
+
+                    <h3>Skills</h3>
+
+                    <div class="resume-entry">
+                        <strong>Programming Languages</strong>
+                        <p id="previewProgramming">—</p>
+                    </div>
+
+                    <div class="resume-entry">
+                        <strong>Software and Tools</strong>
+                        <p id="previewPrograms">—</p>
+                    </div>
+
+                    <div class="resume-entry">
+                        <strong>Languages</strong>
+                        <p id="previewLanguages">—</p>
+                    </div>
+
+                </section>
+
+                <!-- EXPERIENCE -->
+
+                <section class="resume-section" id="experienceSection">
+
+                    <h3>Work Experience and Projects</h3>
+
+                    <div class="resume-entry">
+
+                        <strong id="previewProjectName">
+                            Project Name or Position
+                        </strong>
+
+                        <p id="previewProjectDescription">
+                            Project or work experience description.
+                        </p>
+
+                    </div>
+
+                    <div class="resume-entry">
+
+                        <strong>Technologies</strong>
+
+                        <p id="previewTechnologies">
+                            Technologies used
+                        </p>
+
+                    </div>
+
+                    <div class="resume-entry">
+
+                        <strong>Results and Achievements</strong>
+
+                        <p id="previewResults">
+                            Achievements
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+            <button
+                type="button"
+                class="btn btn-primary preview-download"
+                id="downloadPDFButton"
+                onclick="downloadPDF()"
+            >
+                <i class="bi bi-file-earmark-pdf me-2"></i>
+                Download Resume PDF
+            </button>
+
+            <p class="preview-note">
+                Your resume will be saved in PDF format (A4).
+                If the document is long, it will automatically be split into pages.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+{% endblock %}
