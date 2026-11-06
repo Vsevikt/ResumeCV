@@ -14,6 +14,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
     {% block extra_head %}{% endblock %}
@@ -42,8 +44,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
-    <script src="{% static 'main/js/script.js' %}"></script>
 
     {% block scripts %}{% endblock %}
 </body>

@@ -1,0 +1,170 @@
+
+{% extends "main/layout.html" %}
+{% load static %}
+
+{% block title %}
+My Resume — ResumeCV
+{% endblock %}
+
+{% block content %}
+
+<main class="resume-page">
+
+<!--    <div class="resume-page-header">-->
+<!--        <button-->
+<!--            type="button"-->
+<!--            class="btn btn-outline-primary"-->
+<!--            onclick="window.location.href='/'">-->
+<!--            <i class="bi bi-arrow-left me-2"></i>-->
+<!--            Back to Editor-->
+<!--        </button>-->
+
+<!--        <button-->
+<!--            type="button"-->
+<!--            class="btn btn-primary"-->
+<!--            id="downloadResumePDFButton"-->
+<!--            onclick="downloadPDF()"-->
+<!--        >-->
+<!--            <i class="bi bi-file-earmark-pdf me-2"></i>-->
+<!--            Download Resume PDF-->
+<!--        </button>-->
+<!--    </div>-->
+
+    <div class="resume-paper" id="resume-paper">
+
+        <header class="resume-header">
+
+            <div class="resume-photo">
+                <img
+                    id="resumePhoto"
+                    src=""
+                    alt="Profile Photo"
+                    style="display: none;"
+                >
+
+                <div class="photo-placeholder" id="photo-placeholder">
+                    <i class="bi bi-person"></i>
+                </div>
+            </div>
+
+            <div class="resume-header-info">
+
+                <h1 class="resume-name" id="previewName">
+                    Your First and Last Name
+                </h1>
+
+                <p class="resume-role" id="previewWorkDirection">
+                    Desired Position
+                </p>
+
+                <div class="resume-contact">
+                    <span id="previewCity">
+                        <i class="bi bi-geo-alt"></i> City
+                    </span>
+
+                    <span id="previewEmail">
+                        <i class="bi bi-envelope"></i> Email
+                    </span>
+
+                    <span id="previewPhone">
+                        <i class="bi bi-telephone"></i> Phone
+                    </span>
+                </div>
+
+            </div>
+
+        </header>
+
+        <section class="resume-section" id="aboutSection">
+            <h3>About Me</h3>
+            <p id="previewAbout">—</p>
+        </section>
+
+        <section class="resume-section" id="qualitiesSection">
+            <h3>Personal Qualities</h3>
+            <p id="previewQualities">—</p>
+        </section>
+
+        <section class="resume-section" id="careerGoalSection">
+            <h3>Career Objective</h3>
+            <p id="previewCareerGoal">—</p>
+        </section>
+
+        <section class="resume-section" id="educationSection">
+
+            <h3>Education</h3>
+
+            <div class="resume-entry">
+                <strong id="previewInstitution">
+                    Educational Institution
+                </strong>
+
+                <small id="previewStudyPeriod">
+                    Study Period
+                </small>
+
+                <p id="previewSpecialty">
+                    Field of Study
+                </p>
+            </div>
+
+            <div id="previewAdditionalEducation"></div>
+
+        </section>
+
+        <section class="resume-section" id="skillsSection">
+
+            <h3>Skills</h3>
+
+            <div class="resume-entry">
+                <strong>Programming Languages</strong>
+                <p id="previewProgramming">—</p>
+            </div>
+
+            <div class="resume-entry">
+                <strong>Software and Tools</strong>
+                <p id="previewPrograms">—</p>
+            </div>
+
+            <div class="resume-entry">
+                <strong>Languages</strong>
+                <p id="previewLanguages">—</p>
+            </div>
+
+        </section>
+
+        <section class="resume-section" id="experienceSection">
+
+            <h3>Work Experience and Projects</h3>
+
+            <div class="resume-entry">
+                <strong id="previewProjectName">
+                    Project Name or Position
+                </strong>
+
+                <p id="previewProjectDescription">
+                    Project or work experience description.
+                </p>
+            </div>
+
+            <div class="resume-entry">
+                <strong>Technologies</strong>
+                <p id="previewTechnologies">Technologies used</p>
+            </div>
+
+            <div class="resume-entry">
+                <strong>Results and Achievements</strong>
+                <p id="previewResults">Achievements</p>
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'main/js/script.js' %}"></script>
+{% endblock %}

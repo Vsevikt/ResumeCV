@@ -1,4 +1,5 @@
 {% extends "main/layout.html" %}
+{% load static %}
 
 {% block title %}
 ResumeCV — Create a Professional Resume
@@ -546,7 +547,7 @@ ResumeCV — Create a Professional Resume
                     <h3>Personal Qualities</h3>
 
                     <p id="previewQualities">
-                        Your personal qualities.
+
                     </p>
 
                 </section>
@@ -654,15 +655,30 @@ ResumeCV — Create a Professional Resume
 
             </div>
 
-            <button
-                type="button"
-                class="btn btn-primary preview-download"
-                id="downloadPDFButton"
-                onclick="downloadPDF()"
-            >
-                <i class="bi bi-file-earmark-pdf me-2"></i>
-                Download Resume PDF
-            </button>
+            <!-- ACTION BUTTONS -->
+
+            <div class="preview-actions">
+
+                <button
+                    type="button"
+                    class="btn btn-primary preview-download"
+                    onclick="viewResume()"
+                >
+                    <i class="bi bi-eye me-2"></i>
+                    View Resume
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-primary preview-download"
+                    id="downloadPDFButton"
+                    onclick="downloadPDF()"
+                >
+                    <i class="bi bi-file-earmark-pdf me-2"></i>
+                    Download Resume PDF
+                </button>
+
+            </div>
 
             <p class="preview-note">
                 Your resume will be saved in PDF format (A4).
@@ -674,4 +690,8 @@ ResumeCV — Create a Professional Resume
     </section>
 
 </main>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'main/js/script.js' %}"></script>
 {% endblock %}
